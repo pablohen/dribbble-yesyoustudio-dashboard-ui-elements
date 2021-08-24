@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Container from '../components/Container';
 import MainStats from '../components/MainStats';
 import PaymentDetails from './../components/PaymentDetails';
 import Plan from '../components/Plan';
 import DataChart from './../components/DataChart';
 import selectedImage from '../public/pexels-andre-cook-131723.jpg';
+import SomeImage from '../components/SomeImage';
 
 const Home: NextPage = () => {
   const chartData: any = {
@@ -25,14 +25,14 @@ const Home: NextPage = () => {
     ],
     datasets: [
       {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Subscribed',
+        data: [12, 19, 55, 30, 35, 31],
         fill: 'origin',
         backgroundColor: 'pink',
         borderColor: 'pink',
       },
       {
-        label: '# of Votes2',
+        label: 'Unsubscribed',
         data: [2, 43, 5, 77, 23, 88],
         fill: 'origin',
         backgroundColor: 'lightgreen',
@@ -78,17 +78,7 @@ const Home: NextPage = () => {
             chartData={chartData}
           />
 
-          <div className="p-2">
-            <div
-              className="p-2 w-full rounded-2xl h-[22rem] shadow-sm"
-              style={{
-                background: `url('${
-                  selectedImage.src ?? selectedImage.blurDataURL
-                }') no-repeat center bottom`,
-                backgroundSize: 'cover',
-              }}
-            />
-          </div>
+          <SomeImage selectedImage={selectedImage} />
         </div>
       </div>
     </div>
