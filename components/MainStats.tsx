@@ -15,7 +15,7 @@ const MainStats = ({ title, value, percentage, unit }: Props) => {
   };
 
   return (
-    <div className="flex flex-col space-y-2">
+    <div className="flex flex-col space-y-2 min-w-max">
       <span className="text-gray-400 font-bold">{title}</span>
       <span className="text-3xl text-gray-800 font-extrabold">
         {

@@ -45,7 +45,7 @@ const Home: NextPage = () => {
     <div className="bg-[#eff3f8] min-h-screen">
       <div className="p-2 mb-[-1rem]">
         <Container>
-          <div className="flex space-x-4 justify-between overflow-hidden overflow-x-auto">
+          <div className="flex space-x-8 justify-between overflow-hidden overflow-x-auto">
             <MainStats title="Subscribers" value={5097} percentage={33.45} />
             <MainStats title="Streams" value={24456} percentage={-112} />
             <MainStats
